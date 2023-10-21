@@ -1,0 +1,23 @@
+
+    p {
+        color:red;
+        background-color:yellow
+    }
+    .menu-logo{
+        width: 30px;
+        height:25px;
+        filter: sepia(100%);
+    }
+    .btn-outline-success{
+    --bs-btn-color: brown;
+    --bs-btn-border-color: brown;
+    --bs-btn-hover-color: brown;
+    --bs-btn-hover-bg: white;
+    --bs-btn-hover-border-color: brown;
+    --bs-btn-focus-shadow-rgb: 25,135,84;
+    --bs-btn-active-color: brown;
+    --bs-btn-active-bg: white;
+    --bs-btn-active-border-color: brown;
+    }
+
+ 
