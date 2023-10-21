@@ -1,6 +1,8 @@
 # JREE27Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.6.
+This is my initial Angular Project
+
+# Old Readme part:
 
 ## Development server
 
