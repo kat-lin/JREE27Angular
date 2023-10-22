@@ -7,9 +7,10 @@
     <script>
         // Store the end of URL the user was trying to access when receiving the 404:
         sessionStorage.redirect = location.href.substring(location.href.lastIndexOf('/') + 1);
+        let redirectURL = '/JREE27Angular' + sessionStorage.redirect;
     </script>
 
-    <meta http-equiv="refresh" content="0;URL='/JREE27Angular'">
+    <meta http-equiv="refresh" content="0;URL={{redirectURL}}>
     </meta>
 </head>
 
