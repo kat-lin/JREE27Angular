@@ -36,9 +36,9 @@ import { GalleryselectorComponent } from './galleryselector/galleryselector.comp
         {path: 'directives', component: DirectivesComponent },
         {path: 'home', component: HomeComponent},
         {path: '', component: HomeComponent},
-        {path: '#', component: HomeComponent},
         {path: 'databinding', component: DatabindingComponent},
-        {path: '**', redirectTo: 'home', pathMatch: 'full'},
+        {path: '**', redirectTo: 'home'},
+        //{path: '**', redirectTo: 'home', pathMatch: 'full'},
         
         //{path: '**', component: pageNotFoundComponent},
     ]   //,{useHash: true},
