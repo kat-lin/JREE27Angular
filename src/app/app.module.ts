@@ -36,16 +36,15 @@ import { GalleryselectorComponent } from './galleryselector/galleryselector.comp
         {path: 'about', component: AboutComponent },
         {path: 'directives', component: DirectivesComponent },
         {path: 'home', component: HomeComponent},
+        {path: '', component: HomeComponent},
         {path: 'databinding', component: DatabindingComponent},
-
-        {path: '**', redirectTo: 'home', pathMatch: 'full'},
-        
+        //{path: '**', redirectTo: 'home', pathMatch: 'full'},
         
         //{path: '**', component: pageNotFoundComponent},
-    ],
-    {useHash: true},)  
+    ]   //,{useHash: true},
+    )  
   ],
-  exports: [RouterModule],
+  //exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })
