@@ -6,9 +6,8 @@
     <title>Match your application's title</title>
     <script>
         // Store the end of URL the user was trying to access when receiving the 404:
-        sessionStorage.redirect = location.href.substring(location.href.lastIndexOf('/') + 1);
-        let redirectURL = '/JREE27Angular/' + sessionStorage.redirect;
-        console.log(redirectURL);
+        //sessionStorage.redirect = location.href.substring(location.href.lastIndexOf('/') + 1);
+        //console.log(redirectURL);
     </script>
 
     <meta http-equiv="refresh" content="0;URL='/JREE27Angular'">
@@ -16,9 +15,7 @@
 </head>
 
 <body>
-    <script>
-        console.log("Redirect url: {{redirectURL}}");
-    </script>
+
 </body>
 
 </html>
