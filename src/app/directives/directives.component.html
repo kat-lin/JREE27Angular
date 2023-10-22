@@ -1,6 +1,23 @@
-<p>directives works!</p>
-<table *ngIf='products.length !==0; else noProductWarning' class ="table table-striped"> <!-- ; else noProductWarning-->
-
+<h3>Angular ngIf, nfFor, piping demo</h3>
+<br>
+<!-- if there are no products in the table, the warning is shown-->
+<table *ngIf='products.length !==0; else noProductWarning' class ="table table-striped"> 
+    <thead>
+      <tr>
+        <th>
+          Product title
+        </th>
+        <th>
+          Product count
+        </th>
+        <th>
+          Product price
+        </th>
+        <th>
+          Product Json demo
+        </th>
+      </tr>
+    </thead>
     <tbody>
     <tr *ngFor='let product of products'>
       <td scope="col">{{ product.title | uppercase }}</td>  <!-- pipe is: | uppercase-->

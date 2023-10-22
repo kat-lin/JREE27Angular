@@ -10,6 +10,7 @@ export class DirectivesComponent {
   
   //products: any = [];
   //products: any[] = [
+  //IProducts form interface in module directory
   products: Array<IProduct> = [
 
     {title: `Shoe A`, count: 150, price: 2.25},
@@ -19,8 +20,6 @@ export class DirectivesComponent {
     //{},
     //{name: "John"}
   ];
-
-  //products[0];
 
   //age: any = 5; <- example
   
