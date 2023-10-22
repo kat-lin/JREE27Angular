@@ -1,0 +1,17 @@
+<p>directives works!</p>
+<table *ngIf='products.length !==0; else noProductWarning' class ="table table-striped"> <!-- ; else noProductWarning-->
+
+    <tbody>
+    <tr *ngFor='let product of products'>
+      <td scope="col">{{ product.title | uppercase }}</td>  <!-- pipe is: | uppercase-->
+      <td scope="col">{{ product.count }}</td>
+      <td scope="col">{{ product.price | currency: 'USD'}}</td>
+      <td scope="col">{{ product | json}}</td>
+
+    </tr>
+    </tbody>
+  </table>
+  <!--p *ngIf='products.length === 0' >There are no products</p-->
+
+  <ng-template #noProductWarning>There are no products</ng-template>
+  

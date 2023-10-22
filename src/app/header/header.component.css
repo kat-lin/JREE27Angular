@@ -19,5 +19,8 @@
     --bs-btn-active-bg: white;
     --bs-btn-active-border-color: brown;
     }
+    li.nav-item.active > a {
+        color: coral;
+    }
 
  

@@ -1,0 +1,15 @@
+<button (click)="incrementCounter()" class ="btn btn-warning">
+    Counter++
+</button>
+&nbsp;
+<button (click)="toggleCounterVis()" class ="btn btn-warning">
+    {{this.showMsg ? "Hide" : "Show"}} counter
+</button>
+<br>
+<p *ngIf="showMsg">{{counter}}</p>
+<br>
+
+<input [(ngModel)]='text'>
+<input [(ngModel)]='text'>
+<input [ngModel]='text'> <!-- test writing there :)-->
+<p>{{text}}</p>
