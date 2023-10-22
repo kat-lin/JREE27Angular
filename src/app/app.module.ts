@@ -25,20 +25,20 @@ import { GalleryselectorComponent } from './galleryselector/galleryselector.comp
     DirectivesComponent,
     AboutComponent,
     HomeComponent,
-
     GalleryselectorComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot([
-        //localhost:4200/home
+        //localhost:4200/home -> load HomeComponent
         {path: 'about', component: AboutComponent },
         {path: 'directives', component: DirectivesComponent },
         {path: 'home', component: HomeComponent},
         {path: '', component: HomeComponent},
+        {path: '#', component: HomeComponent},
         {path: 'databinding', component: DatabindingComponent},
-        //{path: '**', redirectTo: 'home', pathMatch: 'full'},
+        {path: '**', redirectTo: 'home', pathMatch: 'full'},
         
         //{path: '**', component: pageNotFoundComponent},
     ]   //,{useHash: true},
