@@ -39,9 +39,13 @@ import { GalleryselectorComponent } from './galleryselector/galleryselector.comp
         {path: 'databinding', component: DatabindingComponent},
 
         {path: '**', redirectTo: 'home', pathMatch: 'full'},
+        
+        
         //{path: '**', component: pageNotFoundComponent},
-    ])  
+    ],
+    {useHash: true},)  
   ],
+  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })
