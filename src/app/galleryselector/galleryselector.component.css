@@ -15,9 +15,7 @@ a:active{
 }
 
 .footer-pagination{
-
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
