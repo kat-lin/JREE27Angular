@@ -1,6 +1,8 @@
 <h3>Angular ngIf, nfFor, piping demo</h3>
 <br>
 <!-- if there are no products in the table, the warning is shown-->
+<label>Filter: </label>
+<input type="text" (input)="onFilter($event)">
 <table *ngIf='products.length !==0; else noProductWarning' class ="table table-striped"> 
     <thead>
       <tr>
@@ -14,15 +16,19 @@
           Product price
         </th>
         <th>
+          Product stars
+        </th>
+        <th>
           Product Json demo
         </th>
       </tr>
     </thead>
     <tbody>
-    <tr *ngFor='let product of products'>
+    <tr *ngFor='let product of filteredProducts'>
       <td scope="col">{{ product.title | uppercase }}</td>  <!-- pipe is: | uppercase-->
       <td scope="col">{{ product.count }}</td>
       <td scope="col">{{ product.price | currency: 'USD'}}</td>
+      <td><app-star [rating]="product.rating"></app-star></td>
       <td scope="col">{{ product | json}}</td>
 
     </tr>

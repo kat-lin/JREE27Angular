@@ -1,5 +1,9 @@
+import { Injectable } from '@angular/core';
+
 import { Component } from '@angular/core';
 import { IProduct } from 'models/IProduct';
+import { ProductService } from 'src/app/services/product.service';
+
 
 @Component({
   selector: 'app-directives',
@@ -7,23 +11,49 @@ import { IProduct } from 'models/IProduct';
   styleUrls: ['./directives.component.css']
 })
 export class DirectivesComponent {
-  
-  //products: any = [];
-  //products: any[] = [
-  //IProducts form interface in module directory
-  products: Array<IProduct> = [
+  products: Array<IProduct> = [];
+  filteredProducts: Array<IProduct> = [];
 
-    {title: `Shoe A`, count: 150, price: 2.25},
-    {title: `Shoe B`, count: 200, price: 5},
-    {title: `Shoe C`, count: 75, price: 4},
-    {title: `Shoe D`, count: 75, price: 11},
-    //{},
-    //{name: "John"}
-  ];
+  constructor(private ps: ProductService) {}
 
-  //age: any = 5; <- example
-  
-  constructor(){
-    JSON.stringify(this.products);
+  ngOnInit():void{
+    this.ps.getProducts().subscribe({
+      next: (res: IProduct[]) => {
+        this.products = res;
+        this.filteredProducts = this.products;
+      },
+      error:(err: any) => console.error(err),
+    })
+    this.filteredProducts = this.products;
   }
+
+/** NB! TODO::See why this is not working
+      private ps;
+      constructor(productService: ProductService) {
+       this.ps = productService;
+      }
+
+      ngOnInit(): void {
+        this.products = this.productService.getProducts();
+       }
+*/
+
+  
+  onFilter($event: any): void{
+    console.log($event.target.value.toLowerCase());
+    let filterString =$event.target.value.toLowerCase();
+    /** 
+      //Ternary:
+      this.filteredProducts = filterString ==== ""
+      ? this.products;
+      : this.filteredProducts = this.products.filter(p => p.title.toLowerCase().includes(filterString));
+
+     */ 
+    if(filterString ==="")
+      this.filteredProducts = this.products;
+    else
+      this.filteredProducts = this.products.filter(p => p.title.toLowerCase().includes(filterString));
+      
+  }
+
 }

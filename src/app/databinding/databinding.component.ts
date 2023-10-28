@@ -10,10 +10,13 @@ export class DatabindingComponent {
   text = ""
   counter = 0;
   showMsg = true;
-  incrementCounter(): void{
+  incrementCounter(event:any): void{
 
     //console.log("Button clicked");
+    console.log(`<<< ${JSON.stringify(event)}`);
+    console.log(event);
     this.counter += 1;
+    
   }
 
   

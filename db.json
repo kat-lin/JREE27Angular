@@ -1,0 +1,9 @@
+{
+    "products":  [
+        {"title": "Nike", "count": 150, "price": 2.25, "rating": 5},
+        {"title": "Puma", "count": 200, "price": 5, "rating": 3},
+        {"title": "Balenciaga", "count": 75,  "price": 4, "rating": 1},
+        {"title": "Superga", "count": 75,  "price": 11, "rating": 2.5}
+    ]
+   }
+   
